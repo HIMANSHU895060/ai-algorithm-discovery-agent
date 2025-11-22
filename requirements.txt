@@ -1,16 +1,5 @@
 flask==3.0.0
 numpy==1.24.3
-scipy==1.11.4
-deap==1.4.1
-gym==0.26.2
-torch==2.1.0
-tensorflow==2.15.0
-scikit-learn==1.3.2
-pandas==2.1.4
-matplotlib==3.8.2
-seaborn==0.13.0
-nlopt==2.7.1
-pygad==3.2.0
 gunicorn==21.2.0
 werkzeug==3.0.1
 click==8.1.7
