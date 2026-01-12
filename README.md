@@ -23,6 +23,54 @@
 - **Docker Support**: Production-ready containerization
 - **CI/CD Pipeline**: GitHub Actions for automated testing and deployment
 
+- - **Real-Time Algorithm Complexity Predictor**: Analyzes algorithm code to predict and visualize Big-O complexity (time and space) with confidence scores
+- **Algorithm Benchmark Suite**: Comprehensive performance profiling with execution time, memory usage tracking, and scalability analysis
+- **Interactive CLI Interface**: User-friendly command-line interface with algorithm recommendations, performance metrics, and session management
+
+- 
+### New Unique Features
+
+#### 1. Real-Time Complexity Predictor
+
+```python
+from complexity_predictor import ComplexityPredictor
+
+predictor = ComplexityPredictor()
+algorithm_code = """
+def bubble_sort(arr):
+    for i in range(len(arr)):
+        for j in range(len(arr) - i - 1):
+            if arr[j] > arr[j + 1]:
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+"""
+
+analysis = predictor.analyze_code(algorithm_code)
+print(f"Time Complexity: {analysis['time_complexity']['predicted']}")
+print(f"Confidence: {analysis['time_complexity']['confidence']}%")
+```
+
+#### 2. Algorithm Benchmark Suite
+
+```python
+from benchmark_suite import BenchmarkSuite
+
+suite = BenchmarkSuite()
+suite.add_algorithm(bubble_sort, "Bubble Sort")
+suite.add_algorithm(quick_sort, "Quick Sort")
+
+test_cases = create_test_suite([100, 1000, 5000])
+results = suite.run_all(test_cases)
+print(suite.get_performance_report())
+```
+
+#### 3. Interactive CLI
+
+```bash
+python interactive_cli.py discover --problem-type sorting
+python interactive_cli.py recommend
+python interactive_cli.py tips
+```
+
 ---
 
 ## 📦 Installation
@@ -313,9 +361,9 @@ pytest -v
 
 ## 🚦 Roadmap
 
-- [ ] Web UI dashboard
-- [ ] Algorithm code visualization
-- [ ] Real-time performance graphs
+- [ x Web UI dashboard
+- [ x Algorithm code visualization
+- [ x Real-time performance graphs
 - [ ] Support for custom algorithm templates
 - [ ] Multi-language code generation (Java, C++, Go)
 - [ ] GraphQL API
